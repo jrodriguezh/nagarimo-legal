@@ -1,5 +1,442 @@
 <!doctype html>
-<html lang="es"><head><meta charset="utf-8">
-<meta http-equiv="refresh" content="0; url=soporte.html">
-<link rel="canonical" href="soporte.html"><title>Nagarimo</title></head>
-<body><a href="soporte.html">Soporte de Nagarimo</a></body></html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Nagarimo · Sueño, alimentación, salud y desarrollo de tu bebé</title>
+<meta name="description" content="Nagarimo reúne el sueño, la alimentación, la salud y el desarrollo de tu bebé en una sola app, con base científica. Gratis, sin publicidad y sin registro: tus datos viven en tu móvil.">
+<meta name="theme-color" content="#0b1020">
+<link rel="icon" href="assets/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="assets/nagarimo-icon-180.png">
+<link rel="stylesheet" href="assets/nagarimo.css">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Nagarimo · Crianza con base científica">
+<meta property="og:description" content="Sueño, alimentación, salud y desarrollo de tu bebé en una sola app. Gratis, sin publicidad y sin registro.">
+<meta property="og:image" content="assets/nagarimo-icon.png">
+<meta name="twitter:card" content="summary_large_image">
+
+<style>
+/* Estilos propios de la landing. El resto vive en nagarimo.css, que
+   comparten también las páginas legales para que todo sea el mismo sitio. */
+
+/* ── Hero ─────────────────────────────────────────────────────────────── */
+.hero { padding: 64px 0 40px; }
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.05fr .95fr;
+  gap: 48px;
+  align-items: center;
+}
+.hero h1 { margin-bottom: 18px; }
+.hero h1 .accent {
+  background: linear-gradient(100deg, var(--menta), var(--luna));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.hero-icon {
+  width: 76px; height: 76px; border-radius: 20px;
+  box-shadow: var(--shadow); margin-bottom: 22px; display: block;
+}
+.cta-row { display: flex; flex-wrap: wrap; gap: 12px; margin: 26px 0 14px; }
+.cta-note { font-size: 13.5px; color: var(--bruma); }
+
+/* Insignias de tienda dibujadas, no imágenes: pesan cero, se ven nítidas en
+   cualquier pantalla y siguen el tema claro/oscuro como el resto. */
+.store-btn {
+  display: inline-flex; align-items: center; gap: 11px;
+  padding: 11px 20px 11px 17px; border-radius: 14px;
+  border: 1px solid var(--line); background: var(--indigo-plus);
+  color: var(--marfil); transition: transform .18s ease, border-color .18s ease;
+}
+.store-btn:hover { text-decoration: none; transform: translateY(-2px); border-color: var(--luna); }
+.store-btn svg { width: 25px; height: 25px; flex: none; }
+.store-btn small { display: block; font-size: 11px; color: var(--bruma); line-height: 1.25; }
+.store-btn b { font-size: 15.5px; font-weight: 650; letter-spacing: -.2px; }
+.store-btn[aria-disabled="true"] { opacity: .55; pointer-events: none; }
+
+/* ── Maqueta de teléfono ──────────────────────────────────────────────── */
+.phones { display: flex; justify-content: center; align-items: flex-start;
+         gap: 18px; perspective: 1400px; }
+.phone {
+  width: 250px; flex: none;
+  border-radius: 34px;
+  border: 1px solid var(--line);
+  background: linear-gradient(170deg, var(--indigo) 0%, var(--night) 100%);
+  box-shadow: var(--shadow);
+  padding: 12px 11px 16px;
+  position: relative;
+}
+.phone.tilt { transform: rotateY(-11deg) rotateX(3deg) translateZ(-30px); }
+.phone .notch {
+  width: 74px; height: 5px; border-radius: 999px;
+  background: var(--line); margin: 3px auto 12px;
+}
+.scr-label {
+  font-size: 10.5px; letter-spacing: 1.3px; text-transform: uppercase;
+  color: var(--bruma); margin: 0 4px 9px; font-weight: 700;
+}
+.scr-card {
+  background: var(--indigo-plus); border: 1px solid var(--line);
+  border-radius: 14px; padding: 11px 12px; margin-bottom: 9px;
+}
+.scr-card .k {
+  font-size: 9.5px; letter-spacing: 1px; text-transform: uppercase;
+  font-weight: 700; margin-bottom: 4px;
+}
+.scr-card .v { font-size: 20px; font-weight: 700; letter-spacing: -.5px; }
+.scr-card .s { font-size: 11px; color: var(--bruma); line-height: 1.45; }
+.k-menta { color: var(--menta); } .k-luna { color: var(--luna); }
+.k-ambar { color: var(--ambar); } .k-coral { color: var(--coral); }
+.k-lila { color: var(--lila); }
+.bar { height: 7px; border-radius: 999px; background: var(--line); overflow: hidden; margin-top: 8px; }
+.bar i { display: block; height: 100%; border-radius: 999px; }
+.row { display: flex; align-items: center; gap: 8px; font-size: 11.5px; margin-top: 6px; }
+.dot { width: 7px; height: 7px; border-radius: 50%; flex: none; }
+.chips { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 9px; }
+.chip {
+  font-size: 10px; padding: 3px 9px; border-radius: 999px;
+  border: 1px solid var(--line); color: var(--niebla);
+}
+
+/* ── Funciones ────────────────────────────────────────────────────────── */
+.feature { transition: transform .2s ease, border-color .2s ease; }
+.feature:hover { transform: translateY(-3px); border-color: var(--luna); }
+.feature .emoji { font-size: 24px; display: block; margin-bottom: 10px; }
+.feature h3 { margin-bottom: 6px; }
+.feature p { font-size: 14.5px; color: var(--niebla); margin: 0; }
+
+/* ── Privacidad ───────────────────────────────────────────────────────── */
+.privacy {
+  background: var(--indigo);
+  border: 1px solid var(--line);
+  border-radius: 26px;
+  padding: 42px 40px;
+}
+.privacy ul { margin: 16px 0 0; padding-left: 20px; color: var(--niebla); }
+.privacy li { margin-bottom: 8px; }
+
+/* ── Cifras ───────────────────────────────────────────────────────────── */
+.stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+.stat { text-align: center; padding: 20px 10px; }
+.stat b { display: block; font-size: 27px; font-weight: 700; color: var(--menta); letter-spacing: -.6px; }
+.stat span { font-size: 13px; color: var(--bruma); }
+
+/* ── Cierre ───────────────────────────────────────────────────────────── */
+.closing { text-align: center; }
+.closing .cta-row { justify-content: center; }
+
+@media (max-width: 900px) {
+  .hero-grid { grid-template-columns: 1fr; gap: 36px; }
+  .phones { gap: 0; }
+  .phone.tilt { display: none; }
+  .stats { grid-template-columns: repeat(2, 1fr); }
+  .privacy { padding: 28px 22px; }
+  .hero { padding: 40px 0 24px; }
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <img src="assets/nagarimo-icon.png" alt="">
+      <span>Nagarimo</span>
+    </a>
+    <nav class="nav">
+      <a class="hide-sm" href="#que-es">Qué es</a>
+      <a class="hide-sm" href="#funciones">Funciones</a>
+      <a class="hide-sm" href="#privacidad">Privacidad</a>
+      <a href="soporte.html">Soporte</a>
+      <a class="btn btn-primary btn-sm" href="#descargar">Descargar</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<!-- ── HERO ──────────────────────────────────────────────────────────── -->
+<section class="hero" id="descargar">
+  <div class="wrap hero-grid">
+    <div>
+      <img class="hero-icon" src="assets/nagarimo-icon.png" alt="Icono de Nagarimo">
+      <h1>Entiende el ritmo<br>de tu bebé.<br><span class="accent">Sin agobios.</span></h1>
+      <p class="lead">
+        Sueño, alimentación, salud y desarrollo en una sola app de crianza,
+        para los primeros años y con base científica. Porque la crianza se
+        decide muchas veces de madrugada y con dudas.
+      </p>
+
+      <div class="cta-row" id="cta-row">
+        <a class="store-btn" id="btn-ios" href="#" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.78c.02-2.3 1.88-3.4 1.96-3.45-1.07-1.56-2.73-1.78-3.32-1.8-1.41-.14-2.76.83-3.48.83-.72 0-1.83-.81-3-.79-1.54.02-2.96.9-3.75 2.28-1.6 2.78-.41 6.9 1.15 9.16.76 1.1 1.67 2.34 2.86 2.3 1.15-.05 1.58-.74 2.97-.74 1.38 0 1.78.74 3 .72 1.24-.02 2.02-1.13 2.78-2.24.87-1.28 1.23-2.52 1.25-2.58-.03-.01-2.4-.92-2.42-3.65M14.1 5.98c.63-.77 1.06-1.83.94-2.89-.91.04-2.02.61-2.67 1.37-.58.67-1.09 1.75-.96 2.78 1.02.08 2.06-.51 2.69-1.26"/></svg>
+          <span><small>Descárgala en</small><b>App Store</b></span>
+        </a>
+        <a class="store-btn" id="btn-android" href="#" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#7fd6c2" d="M3.6 2.3c-.3.3-.5.8-.5 1.4v16.6c0 .6.2 1.1.5 1.4l8.7-9.1z"/><path fill="#ffb86b" d="M15.6 15.4 12.3 12l3.3-3.4 3.9 2.2c1 .6 1 1.8 0 2.4z"/><path fill="#8aa4ff" d="m15.6 15.4-3.3-3.4-8.7 9.1c.4.4 1 .4 1.7 0z"/><path fill="#ff7a90" d="m15.6 8.6-3.3 3.4-8.7-9.1c.4-.4 1-.4 1.7 0z"/></svg>
+          <span><small>Disponible en</small><b>Google Play</b></span>
+        </a>
+      </div>
+      <p class="cta-note">
+        Gratis, sin publicidad y sin registro obligatorio. Español e inglés.
+      </p>
+    </div>
+
+    <!-- Maqueta: una recreación sobria de la pantalla «Hoy», con los mismos
+         colores y la misma jerarquía que la app. -->
+    <div class="phones">
+      <div class="phone tilt" aria-hidden="true">
+        <div class="notch"></div>
+        <p class="scr-label">Alimentación · Hoy</p>
+        <div class="scr-card">
+          <div class="k k-menta">Lista de la compra</div>
+          <div class="s">Apunta todo lo que necesites.</div>
+          <div class="chips">
+            <span class="chip">Aguacate</span>
+            <span class="chip">Lentejas</span>
+            <span class="chip">Pañales</span>
+          </div>
+        </div>
+        <div class="scr-card">
+          <div class="k k-ambar">¿Qué le hago de comer?</div>
+          <div class="s">Comida · Crema de calabaza</div>
+          <div class="s">Cena · Tortilla francesa</div>
+        </div>
+        <div class="scr-card">
+          <div class="k k-lila">Esta semana podrías probar</div>
+          <div class="row"><i class="dot" style="background:var(--menta)"></i> Brócoli al vapor</div>
+          <div class="row"><i class="dot" style="background:var(--ambar)"></i> Melocotón</div>
+        </div>
+        <div class="scr-card">
+          <div class="k k-luna">Agua de hoy</div>
+          <div class="v">180 ml</div>
+          <div class="bar"><i style="width:45%;background:var(--luna)"></i></div>
+        </div>
+      </div>
+
+      <div class="phone">
+        <div class="notch"></div>
+        <p class="scr-label">Sueño · Hoy</p>
+        <div class="scr-card">
+          <div class="k k-menta">Próxima siesta</div>
+          <div class="v">13:40</div>
+          <div class="s">Ventana de vigilia de 2 h 15 min, aprendida de sus últimos 14 días.</div>
+          <div class="bar"><i style="width:68%;background:linear-gradient(90deg,var(--menta),var(--luna))"></i></div>
+        </div>
+        <div class="scr-card">
+          <div class="k k-luna">Anoche</div>
+          <div class="v">10 h 25 min</div>
+          <div class="s">22:05 → 08:30 · 2 despertares</div>
+          <div class="row"><i class="dot" style="background:var(--luna)"></i> Se durmió 15 min antes que ayer</div>
+        </div>
+        <div class="scr-card">
+          <div class="k k-coral">Próxima dosis</div>
+          <div class="s">Paracetamol · disponible a las 04:30</div>
+        </div>
+        <div class="scr-card">
+          <div class="k k-ambar">Consejo del día</div>
+          <div class="s">Los despertares de los 8 meses casi siempre son un salto de desarrollo, no un paso atrás.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── QUÉ ES ────────────────────────────────────────────────────────── -->
+<section id="que-es">
+  <div class="wrap narrow">
+    <p class="section-eyebrow">Qué es Nagarimo</p>
+    <h2>Una app que aprende el ritmo real de tu bebé, no el de un manual</h2>
+    <p class="lead">
+      Criar es maravilloso, pero a veces agota. Si llevas días sin dormir, tienes
+      dudas con la lactancia, estáis empezando con los sólidos o quieres acompañar
+      su desarrollo con buena información, Nagarimo es para ti.
+    </p>
+    <p class="muted">
+      Combina lo que registras —siestas, tomas, pañales, temperatura— con guías de
+      referencia (AEP, AAP, OMS, NHS, CDC) para darte respuestas concretas: a qué
+      hora tocará la próxima siesta, cuánta agua necesita, qué le hago de comer hoy,
+      cuántos mililitros de paracetamol le corresponden por su peso.
+    </p>
+  </div>
+</section>
+
+<!-- ── CIFRAS ────────────────────────────────────────────────────────── -->
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="card stats">
+      <div class="stat"><b>+500</b><span>recetas BLW</span></div>
+      <div class="stat"><b>+200</b><span>alimentos y juegos</span></div>
+      <div class="stat"><b>201</b><span>consejos con fuente</span></div>
+      <div class="stat"><b>79</b><span>hitos del desarrollo</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FUNCIONES ─────────────────────────────────────────────────────── -->
+<section id="funciones">
+  <div class="wrap">
+    <p class="section-eyebrow">Funciones</p>
+    <h2>Todo lo del día a día, en un solo sitio</h2>
+    <p class="lead" style="margin-bottom:30px">
+      Cada bloque funciona por su cuenta. Úsalo entero o solo la parte que
+      necesitas ahora mismo.
+    </p>
+
+    <div class="grid grid-3">
+      <div class="card feature">
+        <span class="emoji">🌙</span>
+        <h3>Sueño que aprende</h3>
+        <p>Registra siestas y noches con un toque. Detecta su ventana de vigilia
+        y te dice cuándo tocará la próxima siesta y la hora de dormir. Con
+        detector de regresiones, plan de mejora y sonidos para dormir.</p>
+      </div>
+      <div class="card feature">
+        <span class="emoji">🍼</span>
+        <h3>Lactancia y biberón</h3>
+        <p>Tomas de pecho, biberón, sólidos e hidratación. Guía de lactancia,
+        banco de leche con caducidades y avisos, y compatibilidad de
+        medicamentos con la lactancia.</p>
+      </div>
+      <div class="card feature">
+        <span class="emoji">🥑</span>
+        <h3>Sólidos y BLW</h3>
+        <p>Catálogo de alimentos con alérgenos y edad recomendada, recetas
+        filtrables, calendario de introducción con la regla de los 3 días,
+        lista de la compra y planificador de menús.</p>
+      </div>
+      <div class="card feature">
+        <span class="emoji">❤️‍🩹</span>
+        <h3>Salud con cabeza</h3>
+        <p>Asistente de fiebre, calculadora de dosis según su peso con aviso de
+        la siguiente, episodios de enfermedad, vacunas y revisiones con
+        preguntas preparadas para el pediatra.</p>
+      </div>
+      <div class="card feature">
+        <span class="emoji">📈</span>
+        <h3>Desarrollo y crecimiento</h3>
+        <p>Hitos del desarrollo, juegos con plan diario por edad y percentiles
+        OMS de peso, talla y perímetro craneal, con edad corregida para
+        prematuros.</p>
+      </div>
+      <div class="card feature">
+        <span class="emoji">✨</span>
+        <h3>Para el día a día real</h3>
+        <p>Registra escribiendo o por voz, informe PDF para el pediatra,
+        recuerdos con foto, diario del cuidador, varios bebés, modo embarazo
+        y tema oscuro pensado para las 3 de la mañana.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PRIVACIDAD ────────────────────────────────────────────────────── -->
+<section id="privacidad">
+  <div class="wrap">
+    <div class="privacy">
+      <p class="section-eyebrow">Privacidad</p>
+      <h2>Tus datos viven en tu móvil</h2>
+      <p class="lead" style="margin-bottom:0">
+        No es una frase de marketing: es cómo está construida la app.
+      </p>
+      <ul>
+        <li><b>Sin registro obligatorio.</b> Abres la app y funciona, también sin conexión.</li>
+        <li><b>Sin publicidad ni SDK publicitarios.</b> No hay perfiles, ni rastreo entre apps.</li>
+        <li><b>Todo se guarda en tu dispositivo.</b> Nadie más puede leerlo, nosotros tampoco.</li>
+        <li><b>Las fotos del bebé nunca salen del móvil</b>, ni siquiera con el plan familiar activado.</li>
+        <li><b>Puedes borrarlo todo cuando quieras</b>, desde la propia app y en un toque.</li>
+      </ul>
+      <p class="muted" style="margin-top:18px;margin-bottom:0">
+        Solo si activas el plan familiar se sincronizan los registros con los
+        cuidadores que tú invites, cifrados y en servidores de la Unión Europea.
+        Los detalles, en la <a href="privacidad.html">política de privacidad</a>.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ── CIERRE ────────────────────────────────────────────────────────── -->
+<section class="closing">
+  <div class="wrap narrow">
+    <h2>Descárgala y pruébala esta noche</h2>
+    <p class="lead">
+      Nagarimo es gratis. Premium desbloquea funciones extra, pero lo esencial
+      —registrar, entender y dormir un poco mejor— no cuesta nada.
+    </p>
+    <div class="cta-row">
+      <a class="store-btn" id="btn-ios-2" href="#" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.78c.02-2.3 1.88-3.4 1.96-3.45-1.07-1.56-2.73-1.78-3.32-1.8-1.41-.14-2.76.83-3.48.83-.72 0-1.83-.81-3-.79-1.54.02-2.96.9-3.75 2.28-1.6 2.78-.41 6.9 1.15 9.16.76 1.1 1.67 2.34 2.86 2.3 1.15-.05 1.58-.74 2.97-.74 1.38 0 1.78.74 3 .72 1.24-.02 2.02-1.13 2.78-2.24.87-1.28 1.23-2.52 1.25-2.58-.03-.01-2.4-.92-2.42-3.65M14.1 5.98c.63-.77 1.06-1.83.94-2.89-.91.04-2.02.61-2.67 1.37-.58.67-1.09 1.75-.96 2.78 1.02.08 2.06-.51 2.69-1.26"/></svg>
+        <span><small>Descárgala en</small><b>App Store</b></span>
+      </a>
+      <a class="store-btn" id="btn-android-2" href="#" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#7fd6c2" d="M3.6 2.3c-.3.3-.5.8-.5 1.4v16.6c0 .6.2 1.1.5 1.4l8.7-9.1z"/><path fill="#ffb86b" d="M15.6 15.4 12.3 12l3.3-3.4 3.9 2.2c1 .6 1 1.8 0 2.4z"/><path fill="#8aa4ff" d="m15.6 15.4-3.3-3.4-8.7 9.1c.4.4 1 .4 1.7 0z"/><path fill="#ff7a90" d="m15.6 8.6-3.3 3.4-8.7-9.1c.4-.4 1-.4 1.7 0z"/></svg>
+        <span><small>Disponible en</small><b>Google Play</b></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="links">
+      <a href="soporte.html">Soporte y preguntas frecuentes</a>
+      <a href="privacidad.html">Política de privacidad</a>
+      <a href="terminos.html">Términos de servicio</a>
+      <a href="eliminar-datos.html">Eliminación de datos</a>
+      <a href="mailto:nagarimo.support@gmail.com">nagarimo.support@gmail.com</a>
+    </div>
+    <p class="disclaimer">
+      Nagarimo es una app de crianza y bienestar, <b>no un producto sanitario</b>:
+      orienta y acompaña con información basada en guías públicas de referencia,
+      pero no diagnostica ni sustituye el criterio de un profesional sanitario.
+      Ante cualquier duda sobre la salud de tu bebé consulta con tu pediatra, y
+      ante una urgencia llama al 112.
+    </p>
+    <p style="margin:14px 0 0">© 2026 Jesús Rodríguez Herranz · Nagarimo</p>
+  </div>
+</footer>
+
+<script>
+/* Enlaces a las tiendas.
+   ------------------------------------------------------------------------
+   PARA ACTUALIZAR: pega la URL de App Store en IOS_URL cuando Apple apruebe
+   la app. Mientras esté vacía, el botón de iOS se muestra apagado con
+   «Próximamente» en lugar de llevar a una página que no existe. */
+const IOS_URL = '';
+const ANDROID_URL = 'https://play.google.com/store/apps/details?id=com.nagarimo.app';
+
+(function () {
+  const ua = navigator.userAgent || '';
+  const isIOS = /iPad|iPhone|iPod/.test(ua) ||
+    (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+  const isAndroid = /Android/.test(ua);
+
+  document.querySelectorAll('[id^="btn-ios"]').forEach(function (el) {
+    if (IOS_URL) {
+      el.href = IOS_URL;
+    } else {
+      el.setAttribute('aria-disabled', 'true');
+      el.querySelector('small').textContent = 'Próximamente en';
+    }
+  });
+  document.querySelectorAll('[id^="btn-android"]').forEach(function (el) {
+    el.href = ANDROID_URL;
+  });
+
+  /* En el móvil, la tienda que NO es la suya estorba: se deja delante la que
+     le sirve. En escritorio se ven las dos, que es donde se comparte el
+     enlace para que lo abra otra persona. */
+  if (isIOS || isAndroid) {
+    document.querySelectorAll('.cta-row').forEach(function (row) {
+      const mine = row.querySelector(isIOS ? '[id^="btn-ios"]' : '[id^="btn-android"]');
+      if (mine) row.prepend(mine);
+    });
+  }
+})();
+</script>
+</body>
+</html>

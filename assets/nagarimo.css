@@ -1,0 +1,247 @@
+/* ==========================================================================
+   Nagarimo · hoja de estilos del sitio
+   --------------------------------------------------------------------------
+   Los colores son EXACTAMENTE los de la app (lib/config/theme/colors.dart):
+   "Noche serena" en oscuro y "Día sereno" en claro. La web y la app tienen
+   que sentirse el mismo producto, así que no se inventa ninguna tonalidad.
+   ========================================================================== */
+
+:root {
+  /* Noche serena (modo por defecto de la app) */
+  --night: #0b1020;
+  --indigo: #131a3a;
+  --indigo-plus: #1a2350;
+  --line: #243066;
+  --luna: #8aa4ff;
+  --lila: #b6a4ff;
+  --menta: #79e0c9;
+  --ambar: #ffb86b;
+  --coral: #ff7a90;
+  --marfil: #e8ecff;
+  --niebla: #b9c0e6;
+  --bruma: #8a93c2;
+  --on-menta: #0b1020;
+  --shadow: 0 18px 50px rgba(0, 0, 0, .45);
+  --radius: 18px;
+  --maxw: 1080px;
+  --font: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif;
+}
+
+/* Día sereno. Mismos acentos con un punto más de intensidad, que es lo que
+   hace la app para conservar el contraste AA sobre fondos claros. */
+@media (prefers-color-scheme: light) {
+  :root {
+    --night: #f3f5fd;
+    --indigo: #e9edfa;
+    --indigo-plus: #ffffff;
+    --line: #d3daf0;
+    --luna: #4a63d8;
+    --lila: #7b5fd0;
+    --menta: #17997f;
+    --ambar: #c97a1e;
+    --coral: #d94663;
+    --marfil: #1b2240;
+    --niebla: #3f4870;
+    --bruma: #66709b;
+    --on-menta: #ffffff;
+    --shadow: 0 18px 45px rgba(27, 34, 64, .12);
+  }
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--night);
+  color: var(--marfil);
+  font-family: var(--font);
+  font-size: 16px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* El velo diagonal del fondo de la app: el color de marca emana de una
+   esquina y se desvanece. Es lo que hace que la web "suene" a Nagarimo
+   antes de leer una palabra. */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(1100px 620px at 88% 8%, rgba(138, 164, 255, .16), transparent 62%),
+    radial-gradient(900px 560px at 6% 92%, rgba(121, 224, 201, .13), transparent 60%);
+  pointer-events: none;
+}
+
+a { color: var(--luna); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 20px; }
+.narrow { max-width: 780px; }
+
+/* ── Cabecera ───────────────────────────────────────────────────────────── */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  backdrop-filter: saturate(140%) blur(14px);
+  -webkit-backdrop-filter: saturate(140%) blur(14px);
+  background: color-mix(in srgb, var(--night) 82%, transparent);
+  border-bottom: 1px solid var(--line);
+}
+.site-header .wrap {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-height: 64px;
+}
+.brand { display: flex; align-items: center; gap: 10px; font-weight: 700; color: var(--marfil); }
+.brand:hover { text-decoration: none; }
+.brand img { width: 30px; height: 30px; border-radius: 9px; display: block; }
+.brand span { letter-spacing: -.2px; }
+.nav { margin-left: auto; display: flex; gap: 18px; align-items: center; flex-wrap: wrap; }
+.nav a { color: var(--niebla); font-size: 14.5px; }
+.nav a:hover { color: var(--marfil); text-decoration: none; }
+/* El botón de la barra es un botón, no un enlace más: `.nav a` tiene más
+   especificidad que `.btn-primary` y le estaba pisando el color del texto,
+   que quedaba ilegible sobre el relleno menta. */
+.nav a.btn-primary { color: var(--on-menta); }
+.nav a.btn-primary:hover { color: var(--on-menta); }
+
+/* ── Tipografía ─────────────────────────────────────────────────────────── */
+h1, h2, h3 { line-height: 1.22; letter-spacing: -.4px; margin: 0 0 10px; }
+h1 { font-size: clamp(30px, 5.4vw, 52px); font-weight: 700; }
+h2 { font-size: clamp(23px, 3.2vw, 31px); font-weight: 700; margin-top: 8px; }
+h3 { font-size: 17px; font-weight: 700; }
+p { margin: 0 0 14px; }
+.muted { color: var(--bruma); }
+.lead { font-size: clamp(17px, 2.1vw, 20px); color: var(--niebla); }
+
+/* ── Botones ────────────────────────────────────────────────────────────── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 13px 22px;
+  border-radius: 999px;
+  font-weight: 650;
+  font-size: 15px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+}
+.btn:hover { text-decoration: none; transform: translateY(-1px); }
+.btn-primary { background: var(--menta); color: var(--on-menta);
+               box-shadow: 0 10px 30px rgba(121, 224, 201, .22); }
+.btn-ghost { background: transparent; color: var(--marfil); border-color: var(--line); }
+.btn-ghost:hover { border-color: var(--luna); color: var(--luna); }
+.btn-sm { padding: 9px 16px; font-size: 14px; }
+
+/* ── Tarjetas ───────────────────────────────────────────────────────────── */
+.card {
+  background: var(--indigo-plus);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 22px 24px;
+}
+.grid { display: grid; gap: 16px; }
+.grid-3 { grid-template-columns: repeat(3, 1fr); }
+.grid-2 { grid-template-columns: repeat(2, 1fr); }
+
+/* ── Secciones ──────────────────────────────────────────────────────────── */
+section { padding: 62px 0; }
+.section-eyebrow {
+  font-size: 12.5px;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  color: var(--menta);
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+/* ── Pie ────────────────────────────────────────────────────────────────── */
+.site-footer {
+  border-top: 1px solid var(--line);
+  padding: 34px 0 48px;
+  color: var(--bruma);
+  font-size: 14px;
+}
+.site-footer .links { display: flex; flex-wrap: wrap; gap: 18px; margin-bottom: 14px; }
+.site-footer a { color: var(--niebla); }
+.disclaimer {
+  margin-top: 16px;
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--bruma);
+  max-width: 760px;
+}
+
+/* ── Páginas de texto legal ─────────────────────────────────────────────── */
+.doc { padding: 46px 0 76px; }
+.doc h1 { font-size: clamp(26px, 4vw, 34px); }
+.doc h2 { font-size: 20px; margin-top: 34px; }
+.doc h3 { font-size: 16px; margin-top: 20px; }
+.doc li { margin-bottom: 6px; }
+.doc code {
+  background: var(--indigo);
+  border: 1px solid var(--line);
+  padding: 1px 7px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+.meta { color: var(--bruma); font-size: 14.5px; }
+.note, .warn {
+  border-radius: 12px;
+  padding: 14px 16px;
+  margin: 18px 0;
+  font-size: 14.5px;
+  border: 1px solid var(--line);
+  background: var(--indigo);
+}
+.note { border-left: 3px solid var(--luna); }
+.warn { border-left: 3px solid var(--coral); }
+.lang-divider {
+  margin: 56px 0 30px;
+  border: 0;
+  border-top: 1px solid var(--line);
+}
+.lang-badge {
+  display: inline-block;
+  font-size: 12px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--bruma);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 3px 12px;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 860px) {
+  .grid-3, .grid-2 { grid-template-columns: 1fr; }
+  section { padding: 46px 0; }
+  .nav { gap: 14px; }
+  .nav a { font-size: 14px; }
+}
+
+/* En móvil el menú completo se apilaba en tres líneas y la cabecera se comía
+   100 px de pantalla. Se quedan solo el destino que no está en la página
+   (Soporte) y la acción; el resto del menú ya se recorre haciendo scroll. */
+@media (max-width: 700px) {
+  .site-header .wrap { min-height: 58px; gap: 10px; }
+  .nav { flex-wrap: nowrap; gap: 12px; }
+  .nav a.hide-sm { display: none; }
+  .brand img { width: 27px; height: 27px; }
+  .brand span { font-size: 15px; }
+}
+
+/* Bloque del idioma alternativo dentro de los documentos legales. */
+.lang { border-top: 1px solid var(--line); margin-top: 56px; padding-top: 30px; }
+.lang h1 { font-size: clamp(23px, 3.4vw, 28px); }
+.todo { background: rgba(255,184,107,.14); border: 1px solid var(--ambar);
+        border-radius: 6px; padding: 1px 8px; font-weight: 700; color: var(--ambar); }

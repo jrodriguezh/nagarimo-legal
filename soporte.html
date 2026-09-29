@@ -2,29 +2,33 @@
 <html lang="es">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Nagarimo · Soporte / Support</title>
-<meta name="description" content="Ayuda y contacto de Nagarimo, la app de sueño, alimentación, salud y desarrollo del bebé.">
-<style>
-:root{--bg:#0b1020;--card:#141a33;--ink:#eef0fa;--muted:#a9b0cf;--accent:#7fd6c2;--line:#262e52}
-@media (prefers-color-scheme: light){:root{--bg:#f6f7fb;--card:#fff;--ink:#1b1d29;--muted:#5d6275;--accent:#1f7a6b;--line:#e3e6ef}}
-*{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
-main{max-width:760px;margin:0 auto;padding:40px 16px 64px}
-h1{font-size:28px;margin:0 0 6px}
-h2{font-size:20px;margin:36px 0 10px}
-h3{font-size:16px;margin:18px 0 4px}
-p,li{color:var(--ink)}
-.muted{color:var(--muted)}
-.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin:16px 0}
-a{color:var(--accent)}
-.btn{display:inline-block;background:var(--accent);color:#0b1020;text-decoration:none;font-weight:700;padding:10px 18px;border-radius:999px;margin-top:6px}
-footer{margin-top:40px;font-size:14px;color:var(--muted)}
-hr{border:0;border-top:1px solid var(--line);margin:40px 0}
-</style>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Nagarimo · Soporte y preguntas frecuentes</title>
+<meta name="description" content="Ayuda y contacto de Nagarimo: suscripciones, restaurar compras, borrar datos y preguntas frecuentes.">
+<meta name="theme-color" content="#0b1020">
+<link rel="icon" href="assets/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="assets/nagarimo-icon-180.png">
+<link rel="stylesheet" href="assets/nagarimo.css">
 </head>
 <body>
-<main>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <img src="assets/nagarimo-icon.png" alt="">
+      <span>Nagarimo</span>
+    </a>
+    <nav class="nav">
+      <a href="index.html">Inicio</a>
+      <a href="soporte.html">Soporte</a>
+      <a class="hide-sm" href="privacidad.html">Privacidad</a>
+      <a class="hide-sm" href="terminos.html">Términos</a>
+      <a class="hide-sm" href="eliminar-datos.html">Datos</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap narrow doc">
   <h1>Soporte de Nagarimo</h1>
   <p class="muted">¿Tienes una duda, un problema o una sugerencia? Estamos aquí para ayudarte.</p>
 
@@ -32,7 +36,7 @@ hr{border:0;border-top:1px solid var(--line);margin:40px 0}
     <h3>Contacto</h3>
     <p>Escríbenos a <a href="mailto:nagarimo.support@gmail.com">nagarimo.support@gmail.com</a>. Respondemos normalmente en 48 horas laborables.</p>
     <p class="muted">Para ayudarte más rápido, indica tu dispositivo (iPhone o Android), la versión de la app (aparece al final de Ajustes, p. ej. «Nagarimo v1.0.0») y una breve descripción del problema.</p>
-    <a class="btn" href="mailto:nagarimo.support@gmail.com?subject=Soporte%20Nagarimo">Escribir al soporte</a>
+    <a class="btn btn-primary" href="mailto:nagarimo.support@gmail.com?subject=Soporte%20Nagarimo">Escribir al soporte</a>
   </div>
 
   <h2>Preguntas frecuentes</h2>
@@ -61,7 +65,7 @@ hr{border:0;border-top:1px solid var(--line);margin:40px 0}
     <li><a href="eliminar-datos.html">Eliminación de datos</a></li>
   </ul>
 
-  <hr>
+  <hr class="lang-divider">
 
   <h1>Nagarimo Support</h1>
   <p>Questions, issues or feedback? Email us at <a href="mailto:nagarimo.support@gmail.com">nagarimo.support@gmail.com</a>. We usually reply within 48 business hours.</p>
@@ -70,7 +74,28 @@ hr{border:0;border-top:1px solid var(--line);margin:40px 0}
      <b>Delete data:</b> see <a href="eliminar-datos.html">Data deletion</a>.</p>
   <p><a href="privacidad.html">Privacy Policy</a> · <a href="terminos.html">Terms of Service</a></p>
 
-  <footer>© 2026 Jesús Rodríguez Herranz · Nagarimo</footer>
+  
 </main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="links">
+      <a href="index.html">Inicio</a>
+      <a href="soporte.html">Soporte</a>
+      <a href="privacidad.html">Política de privacidad</a>
+      <a href="terminos.html">Términos de servicio</a>
+      <a href="eliminar-datos.html">Eliminación de datos</a>
+      <a href="mailto:nagarimo.support@gmail.com">nagarimo.support@gmail.com</a>
+    </div>
+    <p class="disclaimer">
+      Nagarimo es una app de crianza y bienestar, <b>no un producto sanitario</b>:
+      orienta y acompaña con información basada en guías públicas de referencia,
+      pero no diagnostica ni sustituye el criterio de un profesional sanitario.
+      Ante cualquier duda sobre la salud de tu bebé consulta con tu pediatra, y
+      ante una urgencia llama al 112.
+    </p>
+    <p style="margin:14px 0 0">© 2026 Jesús Rodríguez Herranz · Nagarimo</p>
+  </div>
+</footer>
 </body>
 </html>
