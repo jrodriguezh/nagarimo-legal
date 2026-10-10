@@ -1,6 +1,6 @@
 # Nagarimo
 
-> Nagarimo predice la próxima siesta de tu bebé, planifica sus comidas BLW y te guía con la fiebre y las dosis. Con base científica, sin publicidad y sin registro. Para iPhone y Android.
+> Nagarimo sabe cuándo le toca dormir a tu bebé, planifica sus comidas con alérgenos y recetas BLW y te dice cómo actuar ante cualquier síntoma. Con referencias científicas, sin publicidad y sin registro. Para iPhone y Android.
 
 App de crianza para los primeros años del bebé (0 a 4 años, y modo embarazo): sueño, alimentación, salud y desarrollo en un solo sitio, con base científica. Gratis, sin publicidad y sin registro obligatorio. Los datos se guardan en el dispositivo.
 
@@ -13,9 +13,9 @@ App de crianza para los primeros años del bebé (0 a 4 años, y modo embarazo):
 - +500 recetas BLW filtrables
 - +200 alimentos con alérgenos y edad
 - +200 juegos con plan diario por edad
-- 232 consejos con su fuente enlazada
+- 232 consejos con su referencia enlazada
 - 79 hitos del desarrollo
-- +430 referencias médicas
+- +430 referencias científicas
 - Fuentes citadas: AEP, AAP, OMS, NHS, CDC, AEMPS, NICE, ACOG
 - Contacto: nagarimo.support@gmail.com
 - Soporte: https://jrodriguezh.github.io/nagarimo-legal/soporte.html
@@ -49,7 +49,7 @@ Aprende la ventana de vigilia real de tu bebé a partir de lo que registras y la
 
 ### ¿En qué se basan las recomendaciones?
 
-En guías públicas de referencia: AEP, AAP, OMS, NHS, CDC o AEMPS, entre otras. Cada consejo y cada herramienta de salud enlaza a su fuente, y en Ajustes tienes la bibliografía completa con más de 430 referencias.
+En evidencia científica y en las guías de AEP, AAP, OMS, NHS, CDC o AEMPS, entre otras. Cada consejo y cada herramienta de salud enlaza a su referencia, y en Ajustes tienes la bibliografía completa con más de 430 referencias científicas.
 
 ### ¿Para qué edades sirve?
 
