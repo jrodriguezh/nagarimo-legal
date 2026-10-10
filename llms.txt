@@ -1,0 +1,68 @@
+# Nagarimo
+
+> Nagarimo predice la próxima siesta de tu bebé, planifica sus comidas BLW y te guía con la fiebre y las dosis. Con base científica, sin publicidad y sin registro. Para iPhone y Android.
+
+App de crianza para los primeros años del bebé (0 a 4 años, y modo embarazo): sueño, alimentación, salud y desarrollo en un solo sitio, con base científica. Gratis, sin publicidad y sin registro obligatorio. Los datos se guardan en el dispositivo.
+
+## Datos
+
+- Plataformas: iPhone (App Store) y Android (Google Play)
+- App Store: próximamente
+- Google Play: https://play.google.com/store/apps/details?id=com.nagarimo.app
+- Idiomas: español e inglés
+- +500 recetas BLW filtrables
+- +200 alimentos con alérgenos y edad
+- +200 juegos con plan diario por edad
+- 232 consejos con su fuente enlazada
+- 79 hitos del desarrollo
+- +430 referencias médicas
+- Fuentes citadas: AEP, AAP, OMS, NHS, CDC, AEMPS, NICE, ACOG
+- Contacto: nagarimo.support@gmail.com
+- Soporte: https://jrodriguezh.github.io/nagarimo-legal/soporte.html
+- Privacidad: https://jrodriguezh.github.io/nagarimo-legal/privacidad.html
+- Términos: https://jrodriguezh.github.io/nagarimo-legal/terminos.html
+- Página: https://jrodriguezh.github.io/nagarimo-legal/index.html
+
+Nagarimo no es un producto sanitario: orienta, pero no diagnostica ni sustituye al pediatra.
+
+## Preguntas frecuentes
+
+### ¿Nagarimo es gratis?
+
+Sí. Registrar, entender su ritmo y consultar las guías no cuesta nada, y no hay publicidad. Premium desbloquea funciones extra y el plan familiar, con suscripción mensual, anual o un único pago de por vida.
+
+### ¿Necesito crear una cuenta?
+
+No. Nagarimo funciona sin registro y guarda tus datos en tu dispositivo. Solo necesitas iniciar sesión con Apple o Google si activas el plan familiar para sincronizar los datos con otros cuidadores.
+
+### ¿Dónde se guardan los datos de mi bebé?
+
+En tu móvil. No se suben a ningún servidor ni los compartimos con nadie. Si activas el plan familiar, los registros se sincronizan cifrados con quien tú invites, en servidores de la Unión Europea. Las fotos del bebé nunca se suben.
+
+### ¿Puedo compartirlo con mi pareja o con los abuelos?
+
+Sí, con el plan familiar de Premium. Invitas a cada cuidador con un código y todos veis y apuntáis los mismos registros desde vuestro móvil, en iPhone o en Android.
+
+### ¿Cómo calcula la próxima siesta?
+
+Aprende la ventana de vigilia real de tu bebé a partir de lo que registras y la contrasta con las referencias para su edad. Con ello sugiere la hora de la siesta, la de dormir y detecta regresiones y transiciones de siestas.
+
+### ¿En qué se basan las recomendaciones?
+
+En guías públicas de referencia: AEP, AAP, OMS, NHS, CDC o AEMPS, entre otras. Cada consejo y cada herramienta de salud enlaza a su fuente, y en Ajustes tienes la bibliografía completa con más de 430 referencias.
+
+### ¿Para qué edades sirve?
+
+Para los primeros años del bebé, de 0 a 4 años. Y con el modo embarazo puedes empezar antes de que nazca: contador de contracciones, plan de parto y la maleta del hospital.
+
+### ¿Puedo usarla con más de un bebé?
+
+Sí. Puedes añadir varios bebés y cambiar entre ellos en un toque. Cada uno tiene su propio ritmo y sus registros.
+
+### ¿Nagarimo sustituye al pediatra?
+
+No. Orienta y acompaña con información basada en guías de referencia, pero no diagnostica ni sustituye el criterio de un profesional sanitario. Ante cualquier duda, consulta con tu pediatra, y ante una urgencia llama al 112.
+
+### ¿Cómo cancelo la suscripción o restauro una compra?
+
+La suscripción se gestiona desde App Store o Google Play y sigue activa hasta el final del periodo pagado. Para restaurar una compra, abre Ajustes, Premium y pulsa «Restaurar compra». Tienes los pasos detallados en Soporte.
