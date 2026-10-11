@@ -2,7 +2,7 @@
 
 > Nagarimo sabe cuándo le toca dormir a tu bebé, planifica sus comidas con alérgenos y recetas BLW y te dice cómo actuar ante cualquier síntoma. Con referencias científicas, sin publicidad y sin registro. Para iPhone y Android.
 
-App de crianza para los primeros años del bebé (0 a 4 años, y modo embarazo): sueño, alimentación, salud y desarrollo en un solo sitio, con base científica. Gratis, sin publicidad y sin registro obligatorio. Los datos se guardan en el dispositivo.
+App de crianza para los primeros años del bebé (0 a 3 años, y modo embarazo): sueño, alimentación, salud y desarrollo en un solo sitio, con base científica. Gratis, sin publicidad y sin registro obligatorio. Los datos se guardan en el dispositivo. La crea una sola persona, Jesús, padre, sin una empresa detrás.
 
 ## Datos
 
@@ -27,6 +27,10 @@ Nagarimo no es un producto sanitario: orienta, pero no diagnostica ni sustituye 
 
 ## Preguntas frecuentes
 
+### ¿Quién está detrás de Nagarimo?
+
+Un padre, terapeuta ocupacional y desarrollador de software. No hay una gran empresa detrás. Nagarimo nace de su propia experiencia como padre y la desarrolla en su tiempo libre, escuchando a las familias que la usan.
+
 ### ¿Nagarimo es gratis?
 
 Sí. Registrar, entender su ritmo y consultar las guías no cuesta nada, y no hay publicidad. Premium desbloquea funciones extra y el plan familiar, con suscripción mensual, anual o un único pago de por vida.
@@ -43,9 +47,9 @@ En tu móvil. No se suben a ningún servidor ni los compartimos con nadie. Si ac
 
 Sí, con el plan familiar de Premium. Invitas a cada cuidador con un código y todos veis y apuntáis los mismos registros desde vuestro móvil, en iPhone o en Android.
 
-### ¿Cómo calcula la próxima siesta?
+### ¿Cómo funciona?
 
-Aprende la ventana de vigilia real de tu bebé a partir de lo que registras y la contrasta con las referencias para su edad. Con ello sugiere la hora de la siesta, la de dormir y detecta regresiones y transiciones de siestas.
+Tú solo cuentas lo que hace tu bebé y Nagarimo se encarga del resto, con un algoritmo transversal basado en guías y marcos científicos de primer nivel. En sueño, por ejemplo, apuntas a qué hora se durmió y se despertó: el algoritmo cruza las referencias para su edad con sus ciclos reales y el resto de sus registros, y te propone la rutina con menos despertares y mejor descanso. Si necesitas que se despierte a una hora concreta, lo reorganiza todo para conseguirlo, a su ritmo. En comida, le dices qué platos sueles cocinar y te prepara el menú de la semana con recetas que le encajan, los alimentos que ya ha probado, los que le tocan por edad y el siguiente alérgeno a introducir.
 
 ### ¿En qué se basan las recomendaciones?
 
@@ -53,7 +57,7 @@ En evidencia científica y en las guías de AEP, AAP, OMS, NHS, CDC o AEMPS, ent
 
 ### ¿Para qué edades sirve?
 
-Para los primeros años del bebé, de 0 a 4 años. Y con el modo embarazo puedes empezar antes de que nazca: contador de contracciones, plan de parto y la maleta del hospital.
+Para los primeros años del bebé, de 0 a 3 años. Y con el modo embarazo puedes empezar antes de que nazca: contador de contracciones, plan de parto y la maleta del hospital.
 
 ### ¿Puedo usarla con más de un bebé?
 
